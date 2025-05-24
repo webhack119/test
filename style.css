@@ -1,0 +1,155 @@
+/* General Readability for markdown-content div */
+#markdown-content {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 20px auto; /* Center on page and add some top/bottom margin */
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for the content area */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Headings */
+#markdown-content h1 {
+  font-size: 2.2em;
+  margin-top: 1em;
+  margin-bottom: 0.6em;
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 0.3em;
+}
+
+#markdown-content h2 {
+  font-size: 1.8em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 0.3em;
+}
+
+#markdown-content h3 {
+  font-size: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 0.4em;
+}
+
+#markdown-content h4 {
+  font-size: 1.25em;
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+}
+
+#markdown-content h5 {
+  font-size: 1.1em;
+  margin-top: 1em;
+  margin-bottom: 0.2em;
+}
+
+#markdown-content h6 {
+  font-size: 1em;
+  margin-top: 1em;
+  margin-bottom: 0.2em;
+  color: #586069;
+}
+
+/* Paragraphs */
+#markdown-content p {
+  margin-bottom: 1em;
+}
+
+/* Lists */
+#markdown-content ul,
+#markdown-content ol {
+  padding-left: 30px; /* Indentation */
+  margin-bottom: 1em;
+}
+
+#markdown-content li > ul,
+#markdown-content li > ol {
+  margin-bottom: 0.5em; /* Space for nested lists */
+}
+
+/* Code Blocks */
+#markdown-content pre {
+  background-color: #f0f0f0; /* Slightly darker than general code for distinction */
+  padding: 16px;
+  overflow-x: auto; /* Horizontal scrolling */
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 0.9em;
+  border-radius: 6px;
+  margin-bottom: 1em;
+}
+
+/* Inline Code */
+#markdown-content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  background-color: #e8e8e8; /* Lighter than pre, distinct from normal text */
+  padding: 0.2em 0.4em;
+  font-size: 0.85em;
+  border-radius: 3px;
+}
+
+/* Inline code within headings or links should not have a background */
+#markdown-content h1 code,
+#markdown-content h2 code,
+#markdown-content h3 code,
+#markdown-content h4 code,
+#markdown-content h5 code,
+#markdown-content h6 code,
+#markdown-content a code {
+  background-color: transparent;
+  padding: 0;
+  font-size: inherit; /* Match heading font size */
+}
+
+/* Code blocks should ensure `code` tags within them don't get double styling */
+#markdown-content pre code {
+  background-color: transparent;
+  padding: 0;
+  font-size: inherit; /* Inherit from pre's font settings */
+  border-radius: 0;
+}
+
+
+/* Blockquotes */
+#markdown-content blockquote {
+  border-left: 4px solid #ccc;
+  margin-left: 0; /* Reset default */
+  padding-left: 1em;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 1em;
+}
+
+#markdown-content blockquote p {
+  margin-bottom: 0.5em; /* Adjust paragraph spacing within blockquotes */
+}
+
+/* Horizontal Rules */
+#markdown-content hr {
+  height: 0.25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e4e8;
+  border: 0;
+}
+
+/* Links */
+#markdown-content a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+#markdown-content a:hover {
+  text-decoration: underline;
+}
+
+/* Images */
+#markdown-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border-radius: 4px;
+}
